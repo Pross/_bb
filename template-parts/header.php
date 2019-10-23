@@ -8,7 +8,7 @@
  */
 
 ?>
-
+<?php do_action( 'fl_before_header' ); ?>
 <header id="masthead" class="site-header">
 	<div class="site-branding">
 	<?php
@@ -41,3 +41,4 @@
 	?>
 	</nav><!-- #site-navigation -->
 </header><!-- #masthead -->
+<?php do_action( 'fl_after_header' ); ?>

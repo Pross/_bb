@@ -14,8 +14,9 @@
 
 get_header();
 ?>
-
+<?php do_action( 'fl_before_content' ); ?>
 	<div id="primary" class="content-area">
+		<?php do_action( 'fl_content_open' ); ?>
 		<main id="main" class="site-main">
 
 		<?php
@@ -52,7 +53,9 @@ get_header();
 		?>
 
 		</main><!-- #main -->
+		<?php do_action( 'fl_content_close' ); ?>
 	</div><!-- #primary -->
+	<?php do_action( 'fl_after_content' ); ?>
 
 <?php
 get_sidebar();

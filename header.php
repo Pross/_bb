@@ -27,3 +27,4 @@
 	<?php do_action( '_bb_header' ); ?>
 
 	<div id="content" class="site-content">
+		<?php do_action( 'fl_content_open' ); ?>

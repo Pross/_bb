@@ -12,7 +12,9 @@
 ?>
 
 	</div><!-- #content -->
+	<?php do_action( 'fl_before_footer' ); ?>
 	<?php do_action( '_bb_footer' ); ?>
+	<?php do_action( 'fl_after_footer' ); ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

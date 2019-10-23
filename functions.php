@@ -93,10 +93,6 @@ if ( ! function_exists( '_bb_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
-
-		add_theme_support( 'fl-theme-builder-headers' );
-		add_theme_support( 'fl-theme-builder-footers' );
-
 	}
 endif;
 add_action( 'after_setup_theme', '_bb_setup' );
@@ -179,6 +175,8 @@ function _bb_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', '_bb_scripts' );
+
+include get_template_directory() . '/classes/class-beaverbuilderunderscores.php';
 
 /**
  * Implement the Custom Header feature.

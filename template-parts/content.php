@@ -8,7 +8,7 @@
  */
 
 ?>
-
+<?php do_action( 'fl_before_post' ); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -28,9 +28,9 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
+	
 	<?php _bb_post_thumbnail(); ?>
-
+	<?php do_action( 'fl_before_post_content' ); ?>
 	<div class="entry-content">
 		<?php
 		the_content(
@@ -56,8 +56,10 @@
 		);
 		?>
 	</div><!-- .entry-content -->
+	<?php do_action( 'fl_after_post_content' ); ?>
 
 	<footer class="entry-footer">
 		<?php _bb_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+<?php do_action( 'fl_after_post' ); ?>

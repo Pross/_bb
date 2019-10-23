@@ -16,6 +16,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
+		<?php do_action( 'fl_page_open' ); ?>
 		<main id="main" class="site-main">
 
 		<?php
@@ -33,6 +34,7 @@ get_header();
 		?>
 
 		</main><!-- #main -->
+		<?php do_action( 'fl_page_close' ); ?>
 	</div><!-- #primary -->
 
 <?php
