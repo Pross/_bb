@@ -13,9 +13,9 @@
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-
+	
 	<?php _s_post_thumbnail(); ?>
-
+	<?php do_action( 'fl_before_content' ); ?>
 	<div class="entry-content">
 		<?php
 		the_content();
@@ -28,7 +28,7 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
+	<?php do_action( 'fl_after_content' ); ?>
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php

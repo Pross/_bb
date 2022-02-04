@@ -9,8 +9,9 @@
 
 get_header();
 ?>
-
+	<?php do_action( 'fl_before_content' ); ?>
 	<main id="primary" class="site-main">
+		<?php do_action( 'fl_content_open' ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -43,9 +44,9 @@ get_header();
 
 		endif;
 		?>
-
+		<?php do_action( 'fl_content_close' ); ?>
 	</main><!-- #main -->
-
+<?php do_action( 'fl_after_content' ); ?>
 <?php
 get_sidebar();
 get_footer();

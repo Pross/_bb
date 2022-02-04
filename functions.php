@@ -149,6 +149,8 @@ function _s_scripts() {
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
+require get_template_directory() . '/inc/beaverbuilderunderscores.php';
+
 /**
  * Implement the Custom Header feature.
  */
